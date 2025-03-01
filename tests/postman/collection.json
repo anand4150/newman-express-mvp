@@ -1,0 +1,54 @@
+{
+    "info": {
+      "name": "API Testing Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET Hello API",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/api/hello",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "hello"]
+          }
+        }
+      },
+      {
+        "name": "POST Echo API",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/echo",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "echo"]
+          },
+          "body": {
+            "mode": "raw",
+            "raw": "{\"data\":\"Test Message\"}"
+          }
+        }
+      },
+      {
+        "name": "GET Health API",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/api/health",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "health"]
+          }
+        }
+      }
+    ]
+  }

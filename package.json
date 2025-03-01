@@ -4,7 +4,8 @@
   "description": "A lightweight Node.js API server with Express.js, providing basic API testing with Newman and htmlextra reporting, packaged in a Docker container. ",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "postman": "newman run tests/postman/collection.json"
   },
   "repository": {
     "type": "git",
