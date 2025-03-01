@@ -4,15 +4,10 @@ const express = require('express');
 const request = require('supertest');
 const app = require('../index'); // Import the actual app
 
-let server;
-
-beforeEach(() => {
-  // Reset any state if needed
-});
-
+// Optional: If you need to close the server after tests
 afterAll((done) => {
-  // Close server if it's running
-  if (server) server.close(done);
+  // If the app exports the server instance
+  if (app.server) app.server.close(done);
   else done();
 });
 
