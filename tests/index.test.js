@@ -1,33 +1,19 @@
 const request = require('supertest');
 const express = require('express');
 
-// Import the app without starting the server
-let app;
+const request = require('supertest');
+const app = require('../index'); // Import the actual app
 
-// Setup and teardown
+let server;
+
 beforeEach(() => {
-  // Clear cache to get a fresh instance
-  jest.resetModules();
-  
-  // Create a new express instance for each test
-  const expressApp = express();
-  expressApp.use(express.json());
-  
-  // Define routes manually to match index.js
-  expressApp.get('/api/hello', (req, res) => {
-    res.json({ message: 'Hello World!' });
-  });
+  // Reset any state if needed
+});
 
-  expressApp.post('/api/echo', (req, res) => {
-    const { data } = req.body;
-    res.json({ received: data });
-  });
-
-  expressApp.get('/api/health', (req, res) => {
-    res.json({ status: 'UP' });
-  });
-  
-  app = expressApp;
+afterAll((done) => {
+  // Close server if it's running
+  if (server) server.close(done);
+  else done();
 });
 
 // Tests for GET /api/hello endpoint
