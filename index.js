@@ -22,6 +22,12 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'UP' });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+// Only start the server if this file is run directly (not imported)
+if (require.main === module) {
+    app.server = app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
+}
+
+// Export the app for testing
+module.exports = app;
