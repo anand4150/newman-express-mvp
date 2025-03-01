@@ -9,7 +9,14 @@ RUN apt update && \
     apt install -y curl && \
     curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt install -y nodejs && \
-    apt clean && rm -rf /var/lib/apt/lists/*
+    apt clean
+
+# Install htmlextra reporter globally
+RUN npm install -g newman-reporter-htmlextra jest-html-reporter
+
+# Set NODE_PATH to ensure global modules are accessible
+ENV NODE_PATH=/usr/lib/node_modules
+# ENV PATH=$PATH:/usr/lib/node_modules/.bin
 
 # Create app directory
 WORKDIR /app

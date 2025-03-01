@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "postman": "newman run tests/postman/collection.json"
+    "test-report": "npm test -- --reporters=default --reporters=jest-html-reporter",
+    "postman": "newman run tests/postman/collection.json",
+    "postman-report": "newman run tests/postman/collection.json -r cli,htmlextra --reporter-htmlextra-export newman/POSTMAN-html-report.html"
   },
   "repository": {
     "type": "git",
