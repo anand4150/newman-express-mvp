@@ -9,8 +9,7 @@ RUN apt update && \
     apt install -y curl && \
     curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt install -y nodejs && \
-    apt clean
-
+    apt clean && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
 WORKDIR /app
