@@ -1,6 +1,4 @@
-const request = require('supertest');
 const express = require('express');
-
 const request = require('supertest');
 const app = require('../index'); // Import the actual app
 
