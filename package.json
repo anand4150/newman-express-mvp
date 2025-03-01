@@ -1,0 +1,25 @@
+{
+  "name": "newman-express-mvp",
+  "version": "1.0.0",
+  "description": "A lightweight Node.js API server with Express.js, providing basic API testing with Newman and htmlextra reporting, packaged in a Docker container. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anand4150/newman-express-mvp.git"
+  },
+  "author": "anand4150",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anand4150/newman-express-mvp/issues"
+  },
+  "homepage": "https://github.com/anand4150/newman-express-mvp#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1"
+  }
+}
