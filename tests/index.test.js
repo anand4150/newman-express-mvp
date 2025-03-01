@@ -23,7 +23,7 @@ describe('GET /api/hello', () => {
     
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('message');
-    expect(response.body.message).toBe('Hello World');
+    expect(response.body.message).toBe('Hello World!');
   });
 });
 
