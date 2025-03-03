@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test-report": "source ./jest-testing.sh && jest --reporters=default --reporters=jest-html-reporter"
+    "test-report": "source ./jest-testing.sh && jest --reporters=default --reporters=jest-html-reporter",
     "postman": "newman run tests/postman/collection.json",
     "postman-report": "newman run tests/postman/collection.json -r cli,htmlextra --reporter-htmlextra-export newman/POSTMAN-html-report.html"
   },
