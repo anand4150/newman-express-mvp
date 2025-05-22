@@ -13,8 +13,7 @@ RUN apt update && \
 
 # Set NODE_PATH to ensure global modules are accessible
 ENV NODE_PATH=/usr/lib/node_modules
-export NODE_PATH=/usr/lib/node_modules
-curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+RUN export NODE_PATH=/usr/lib/node_modules && curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
 
 # ENV PATH=$PATH:/usr/lib/node_modules/.bin    
 # Install htmlextra reporter globally
