@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Node.js 20 and npm
 RUN apt update && \
-    apt install -y curl && \
+    apt install -y curl unzip && \
     curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt install -y nodejs && \
     apt clean
